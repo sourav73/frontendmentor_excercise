@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | News homepage</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="max-width">
+      <a href="#" class="brand">
+        <img src="./images/logo.svg" alt="Brand">
+      </a>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li class="close"><button aria-label="Close"><img src="./images/icon-menu-close.svg" alt="Close"></button>
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </div>
+      <button aria-label="Menu" class="menu"><img src="./images/icon-menu.svg" alt="Menu"></button>
+    </nav>
+  </header>
+  <main>
+    <section class="content">
+      <div class="hero-container max-width">
+        <div class="hero">
+          <div class="hero-img">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./images/image-web-3-desktop.jpg">
+              <img src="./images/image-web-3-mobile.jpg" alt="Hero">
+            </picture>
+            <!-- <img src="./images/image-web-3-desktop.jpg" alt="Hero"> -->
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-title">The Bright Future of Web 3.0?</h1>
+            <div class="hero-text">
+              <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the
+                hands of the
+                people.
+                But is it really fulfilling its promise?</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <aside class="new">
+          <h3>New</h3>
+          <div class="new-content">
+            <h4><a href="#">Hydrogen VS Electric Cars</a></h4>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <hr>
+          <div class="new-content">
+            <h4><a href="#">The Downsides of AI Artistry</a></h4>
+            <p>What are the possible adverse effects of on-demand AI image generation?</p>
+          </div>
+          <hr>
+          <div class="new-content">
+            <h4><a href="#">Is VC Funding Drying Up?</a></h4>
+            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </div>
+        </aside>
+      </div>
+      <div class="sub-news max-width">
+        <div class="news">
+          <div class="news-img">
+            <img src="./images/image-retro-pcs.jpg" alt="news">
+          </div>
+          <div class="news-content">
+            <p class="count">01</p>
+            <h5><a href="#">Reviving Retro PCs</a></h5>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="news">
+          <div class="news-img">
+            <img src="./images/image-top-laptops.jpg" alt="news">
+          </div>
+          <div class="news-content">
+            <p class="count">02</p>
+            <h5><a href="#">Top 10 Laptops of 2022</a></h5>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="news">
+          <div class="news-img">
+            <img src="./images/image-gaming-growth.jpg" alt="news">
+          </div>
+          <div class="news-content">
+            <p class="count">03</p>
+            <h5><a href="#">The Growth of Gaming</a></h5>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://sahabuddin.netlify.app/">Md Sahabuddin</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

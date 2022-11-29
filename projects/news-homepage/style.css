@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap");
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+/* Global styles starts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--off-white);
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+p {
+  color: var(--dark-grayish-blue);
+  font-size: 15px;
+  line-height: 1.75rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.max-width {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+/* Global styles ends */
+
+/* Navbar starts */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+header nav .nav-links {
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: 0.3s;
+}
+
+header nav .nav-links li a {
+  color: var(--dark-grayish-blue);
+}
+
+header nav .nav-links li a:hover {
+  color: var(--soft-orange);
+}
+
+.close {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+/* Navbar ends */
+
+/* Hero starts */
+.hero-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding-inline: 1rem;
+  margin-bottom: 5rem;
+}
+
+.hero-img {
+  margin-bottom: 1.5rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  gap: 3rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.hero-text a {
+  display: inline-block;
+  background: var(--soft-red);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--off-white);
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 2.5rem;
+}
+
+.hero-text a:hover {
+  background: var(--very-dark-blue);
+}
+
+aside {
+  background: var(--very-dark-blue);
+  padding: 2rem 1.5rem;
+}
+
+aside h3 {
+  color: var(--soft-orange);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+aside hr {
+  border: none;
+  height: 1px;
+  background: var(--dark-grayish-blue);
+  margin-block: 2rem;
+}
+
+aside .new-content h4 a {
+  display: inline-block;
+  font-size: 1.25rem;
+  color: var(--off-white);
+  margin-bottom: 0.45rem;
+}
+
+aside .new-content h4 a:hover {
+  color: var(--soft-orange);
+}
+
+aside .new-content p {
+  color: var(--grayish-blue);
+}
+/* Hero ends */
+
+/* News starts */
+.sub-news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-inline: 1rem;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+.news .news-content .count {
+  font-size: 2rem;
+  color: var(--grayish-blue);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.news .news-content h5 a {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.news .news-content h5 a:hover {
+  color: var(--soft-red);
+}
+/* News ends */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-block: 2rem;
+}
+.attribution a {
+  color: var(--soft-red);
+}
+
+@media (max-width: 767px) {
+  header nav {
+    padding: 1.5rem 1rem;
+  }
+
+  header nav .nav-links-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+  }
+
+  header nav .nav-links-container.show {
+    transform: translateX(0);
+  }
+
+  header nav .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 70%;
+    transform: translateX(100%);
+    background: var(--off-white);
+    flex-direction: column;
+    padding-top: 11rem;
+    align-items: flex-start;
+    padding-left: 1.5rem;
+    z-index: 99;
+  }
+
+  header nav .nav-links-container.show .nav-links {
+    transform: translateX(0);
+  }
+
+  header nav .nav-links li a {
+    color: var(--very-dark-blue);
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  .menu {
+    display: block;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero-img {
+    margin-bottom: 1rem;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-text a {
+    margin-top: 1rem;
+  }
+
+  .sub-news {
+    grid-template-columns: 1fr;
+  }
+}
